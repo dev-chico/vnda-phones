@@ -40,7 +40,7 @@ task("components", function () {
 
 task("watch", function () {
   watch("src/styles/**/*.scss", series("scss"));
-  watch("src/js/*.js", series("js"));
+  watch("src/**/*.js", series("js"));
   watch("src/*.html", series("html"));
 });
 

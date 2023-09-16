@@ -1,0 +1,11 @@
+@mixin linkHoverAndActive($colorHover: #fff, $colorActive: #888) {
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    color: $colorHover;
+  }
+
+  &:active {
+    color: $colorActive;
+  }
+}
