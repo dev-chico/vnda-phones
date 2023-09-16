@@ -1,0 +1,48 @@
+@import "../mixins";
+
+.footer {
+  background-color: #2e006c;
+  color: #fff;
+  padding: 16px 0px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+  @include linkHoverAndActive();
+}
+
+.footer-content {
+  width: 70%;
+  padding: 32px 0px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-socials-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-info {
+  color: #aaa;
+}
