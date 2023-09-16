@@ -1,0 +1,55 @@
+@import "../mixins";
+
+.newsletter {
+  background-color: #fff;
+  padding: 64px 0px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.newsletter-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.newsletter-infos > h2 {
+  color: #2e006c;
+  font-size: 2em;
+}
+
+.newsletter-infos > p {
+  color: #343a40;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+}
+
+.newsletter > form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.newsletter-form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsletter-form-group > button {
+  @include formatButton(#6e10ee, #fff);
+  @include linkHoverAndActive();
+  @include hoverButton(#2e006c, #fff);
+}
+
+.newsletter-form-group > input {
+  @include formatInput(#6e10ee, #2e006c);
+}
+
+.newsletter-checkbox-label {
+  color: #495057;
+  font-size: 0.8em;
+  cursor: pointer;
+}

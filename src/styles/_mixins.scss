@@ -9,3 +9,43 @@
     color: $colorActive;
   }
 }
+
+@mixin formatButton($bgColor: transparent, $color: #333) {
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 16px;
+  height: 40px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background-color: $bgColor;
+  color: $color;
+  cursor: pointer;
+}
+
+@mixin hoverButton($bgColor: #fff, $color: #333) {
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    background-color: $bgColor;
+    color: $color;
+  }
+}
+
+@mixin formatInput($borderColor: #333, $focusBorderColor: #111) {
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 1px solid $borderColor;
+  transition: 0.15s ease-in-out;
+
+  &[type="text"] {
+    height: 40px;
+  }
+
+  &[type="text"]:focus {
+    border-color: $focusBorderColor;
+    box-shadow: 0px 0px 4px 0px $focusBorderColor;
+  }
+}
