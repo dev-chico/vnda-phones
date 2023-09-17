@@ -11,6 +11,10 @@ body {
   background-color: $dark-blue;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 ul {
   list-style: none;
 }

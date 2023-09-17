@@ -5,7 +5,7 @@ class WhereToFind extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <section class="where-to-find">
+      <section class="where-to-find" id="whereToFind">
         <header>
           <h2 class="where-to-find-title">Onde nos encontrar</h2>
         </header>

@@ -5,6 +5,8 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const htmlmin = require("gulp-htmlmin");
 const sass = require("gulp-sass")(require("sass"));
+const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename');
 
 task("html", function () {
   return gulp
@@ -38,10 +40,17 @@ task("components", function () {
     .pipe(dest("dist/js"));
 });
 
+gulp.task('images', function () {
+  return gulp.src('src/images/**/*.+(jpg|jpeg|png|gif|svg)')
+    .pipe(imagemin())
+    .pipe(rename({ suffix: '-min' }))
+    .pipe(dest('dist/images'));
+});
+
 task("watch", function () {
   watch("src/styles/**/*.scss", series("scss"));
   watch("src/**/*.js", series("js"));
   watch("src/*.html", series("html"));
 });
 
-task("default", series("html", "scss", "js", "components", "watch"));
+task("default", series("html", "scss", "js", "components", "images", "watch"));

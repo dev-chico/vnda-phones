@@ -5,7 +5,7 @@ class Newsletter extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <section class="newsletter">
+      <section class="newsletter" id="newsletter">
         <div class="newsletter-infos">
           <h2>
             <i class="fa-solid fa-envelope-circle-check"></i>

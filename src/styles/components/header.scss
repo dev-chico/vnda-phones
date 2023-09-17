@@ -31,7 +31,7 @@
   @include linkHoverAndActive();
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
     gap: 24px;
@@ -39,5 +39,11 @@
 
   .header-nav a {
     font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-nav ul {
+    flex-direction: column;
   }
 }
