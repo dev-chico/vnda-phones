@@ -66,4 +66,21 @@
     color: $dark-purple;
     font-size: 1.5em;
   }
+
+  .newsletter > form {
+    width: 90%;
+    gap: 32px;
+  }
+
+  .newsletter-form-group:nth-child(1) {
+    flex-direction: column;
+  }
+
+  .newsletter-form-group > input[type="email"] {
+    width: 100%;
+  }
+
+  .newsletter-form-group > button {
+    width: 100%;
+  }
 }

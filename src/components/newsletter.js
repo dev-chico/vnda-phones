@@ -16,7 +16,7 @@ class Newsletter extends HTMLElement {
 
         <form>
           <div class="newsletter-form-group">
-            <input type="text" placeholder="Insira seu e-mail" class="newsletter-input">
+            <input type="email" placeholder="Insira seu e-mail" class="newsletter-input">
             <button class="newsletter-button" type="button">Assinar agora</button>
           </div>
 

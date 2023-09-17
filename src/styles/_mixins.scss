@@ -40,11 +40,12 @@
   border: 1px solid $borderColor;
   transition: 0.15s ease-in-out;
 
-  &[type="text"] {
+  &[type="email"] {
     height: 40px;
+    width: 250px;
   }
 
-  &[type="text"]:focus {
+  &[type="email"]:focus {
     border-color: $focusBorderColor;
     box-shadow: 0px 0px 4px 0px $focusBorderColor;
   }
