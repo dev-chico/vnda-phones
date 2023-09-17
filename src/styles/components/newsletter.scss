@@ -2,7 +2,7 @@
 
 .newsletter {
   background-color: #fff;
-  padding: 64px 0px;
+  padding: 72px 0px;
 
   display: flex;
   align-items: flex-start;
@@ -40,7 +40,6 @@
 
 .newsletter-form-group > button {
   @include formatButton(#6e10ee, #fff);
-  @include linkHoverAndActive();
   @include hoverButton(#2e006c, #fff);
 }
 

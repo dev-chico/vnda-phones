@@ -1,0 +1,52 @@
+@import "../mixins";
+
+.where-to-find {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+
+  padding: 54px 0px;
+}
+
+.where-to-find-title {
+  color: #070d37;
+  font-size: 2.2em;
+}
+
+.where-to-find > main {
+  display: flex;
+  gap: 64px;
+}
+
+.where-to-find-map {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+.where-to-find-map.active {
+  visibility: visible;
+  width: 700px;
+  height: 350px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 0px #2e006c;
+}
+
+.where-to-find-locations-name > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.where-to-find-btn {
+  font-size: 1em;
+  @include formatButton(transparent, #070d37);
+  @include hoverButton(#2e006c, #fff);
+}
+
+.where-to-find-btn.active {
+  @include formatButton(#6e10ee, #fff);
+  @include hoverButton(#2e006c, #fff);
+}
