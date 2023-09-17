@@ -1,5 +1,7 @@
+@import "../variables";
+
 .customer-feedback {
-  background-color: #fff;
+  background-color: $white;
   padding: 64px 0px;
 
   display: flex;
@@ -18,8 +20,8 @@
 }
 
 .customer-feedback-img > i {
-  color: #fff;
-  background-color: #6e10ee;
+  color: $white;
+  background-color: $purple;
   padding: 8px;
   border-radius: 4px;
   font-size: 1.2em;
@@ -39,7 +41,7 @@
 }
 
 .customer-feedback-text {
-  color: #2e006c;
+  color: $dark-purple;
   font-weight: 700;
   font-style: italic;
   line-height: 30px;
@@ -47,7 +49,7 @@
 }
 
 .customer-feedback-name {
-  color: #14191e;
+  color: $text-black;
   font-weight: 700;
   font-size: 24px;
 }
@@ -66,13 +68,13 @@
 
 .customer-feedback-info > span {
   font-size: 0.8em;
-  color: #495057;
+  color: $gray;
 }
 
 .customer-feedback-info > .purple {
-  color: #4545ff;
+  color: $light-purple;
 }
 
 .customer-feedback-info > .green {
-  color: #296d38;
+  color: $green;
 }

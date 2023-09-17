@@ -1,7 +1,8 @@
 @import "../mixins";
+@import "../variables";
 
 .newsletter {
-  background-color: #fff;
+  background-color: $white;
   padding: 72px 0px;
 
   display: flex;
@@ -16,12 +17,12 @@
 }
 
 .newsletter-infos > h2 {
-  color: #2e006c;
+  color: $dark-purple;
   font-size: 2em;
 }
 
 .newsletter-infos > p {
-  color: #343a40;
+  color: $gray;
   font-size: 0.8em;
   letter-spacing: 0.5px;
 }
@@ -39,16 +40,16 @@
 }
 
 .newsletter-form-group > button {
-  @include formatButton(#6e10ee, #fff);
-  @include hoverButton(#2e006c, #fff);
+  @include formatButton($purple, $white);
+  @include hoverButton($dark-purple, $white);
 }
 
 .newsletter-form-group > input {
-  @include formatInput(#6e10ee, #2e006c);
+  @include formatInput($purple, $dark-purple);
 }
 
 .newsletter-checkbox-label {
-  color: #495057;
+  color: $gray;
   font-size: 0.8em;
   cursor: pointer;
 }

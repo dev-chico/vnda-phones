@@ -1,4 +1,5 @@
 @import "../mixins";
+@import "../variables";
 
 .header {
   padding: 16px 56px;
@@ -11,7 +12,7 @@
 .header-logo {
   font-size: 40px;
   font-weight: bold;
-  color: #fff;
+  color: $white;
 }
 
 .header-nav ul {
@@ -22,7 +23,7 @@
 }
 
 .header-nav a {
-  color: #aaa;
+  color: $light-gray;
   font-weight: 600;
   font-size: 1.1em;
   letter-spacing: 1px;

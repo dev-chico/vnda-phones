@@ -1,8 +1,9 @@
 @import "../mixins";
+@import "../variables";
 
 .footer {
-  background-color: #2e006c;
-  color: #fff;
+  background-color: $dark-purple;
+  color: $white;
   padding: 16px 0px;
 
   display: flex;
@@ -14,11 +15,11 @@
 .footer-logo {
   font-size: 40px;
   font-weight: bold;
-  color: #fff;
+  color: $white;
 }
 
 .footer a {
-  color: #fff;
+  color: $white;
   @include linkHoverAndActive();
 }
 
@@ -44,5 +45,5 @@
 }
 
 .footer-info {
-  color: #aaa;
+  color: $light-gray;
 }
