@@ -30,3 +30,14 @@
 
   @include linkHoverAndActive();
 }
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .header-nav a {
+    font-size: 1em;
+  }
+}

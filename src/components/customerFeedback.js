@@ -23,7 +23,13 @@ class CustomerFeedback extends HTMLElement {
             de vida e aumento na minha produtividade.’’
           </p>
 
-          <h3 class="customer-feedback-name">Luis Antonio de Souza Silva</h3>
+          <div class="customer-feedback-name">
+            <img
+              src="https://scontent.fcac3-1.fna.fbcdn.net/v/t39.30808-6/278976744_1811720649032055_3475664988870548839_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeGezISwsI3ptY-LE0LQ7Wbe19g3nXQ8Qj3X2DeddDxCPREXjzdDUJu3sodpzBdECi81wh-VjC4ukM7bOOqqT9wh&_nc_ohc=kivNzHJmmG0AX9gOIV3&_nc_ht=scontent.fcac3-1.fna&oh=00_AfA50rQ8At1BYAMjUaF00TLdqeEVU2z3pBrGfw8_NHDVBA&oe=650C9BC0"
+              alt="Foto do cliente Luis Antonio de Souza Silva"
+            />
+            <h3>Luis Antonio de Souza Silva</h3>
+          </div>
 
           <footer>
             <div class="customer-feedback-info">

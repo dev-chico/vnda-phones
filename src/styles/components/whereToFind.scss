@@ -51,3 +51,28 @@
   @include formatButton($purple, $white);
   @include hoverButton($dark-purple, $white);
 }
+
+@media screen and (max-width: 1024px) {
+  .where-to-find > main {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .where-to-find-locations-name > ul {
+    flex-direction: row;
+  }
+
+  .where-to-find-maps-container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .where-to-find-map.active {
+    width: 90%;
+  }
+}
