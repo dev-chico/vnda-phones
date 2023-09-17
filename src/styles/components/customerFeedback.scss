@@ -1,0 +1,78 @@
+.customer-feedback {
+  background-color: #fff;
+  padding: 64px 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+
+.customer-feedback-img {
+  position: relative;
+}
+
+.customer-feedback-img > img {
+  width: 250px;
+  border-radius: 4px;
+}
+
+.customer-feedback-img > i {
+  color: #fff;
+  background-color: #6e10ee;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 1.2em;
+
+  position: absolute;
+  top: 150px;
+  right: -16px;
+}
+
+.customer-feedback-content {
+  width: 100%;
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.customer-feedback-text {
+  color: #2e006c;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+.customer-feedback-name {
+  color: #14191e;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.customer-feedback-content > footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.customer-feedback-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customer-feedback-info > span {
+  font-size: 0.8em;
+  color: #495057;
+}
+
+.customer-feedback-info > .purple {
+  color: #4545ff;
+}
+
+.customer-feedback-info > .green {
+  color: #296d38;
+}
