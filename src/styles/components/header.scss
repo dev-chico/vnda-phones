@@ -7,31 +7,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &-logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: $white;
+  }
+
+  &-nav {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    a {
+      color: $light-gray;
+      font-weight: 600;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+
+      @include linkHoverAndActive();
+    }
+  }
 }
 
-.header-logo {
-  font-size: 40px;
-  font-weight: bold;
-  color: $white;
-}
-
-.header-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-}
-
-.header-nav a {
-  color: $light-gray;
-  font-weight: 600;
-  font-size: 1.1em;
-  letter-spacing: 1px;
-
-  @include linkHoverAndActive();
-}
-
-@media screen and (max-width: 768px) {
+@include breakpoint(max-width, 768px) {
   .header {
     flex-direction: column;
     gap: 24px;
@@ -42,7 +44,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@include breakpoint(max-width, 500px) {
   .header-nav ul {
     flex-direction: column;
   }

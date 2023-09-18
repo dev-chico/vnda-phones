@@ -8,53 +8,53 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+
+  &-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & > h2 {
+      color: $dark-purple;
+      font-size: 2em;
+    }
+
+    & > p {
+      color: $gray;
+      font-size: 0.8em;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  & > form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &-form-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & > button {
+      @include formatButton($purple, $white);
+      @include hoverButton($dark-purple, $white);
+    }
+
+    & > input {
+      @include formatInput($purple, $dark-purple);
+    }
+  }
+
+  &-checkbox-label {
+    color: $gray;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
 }
 
-.newsletter-infos {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.newsletter-infos > h2 {
-  color: $dark-purple;
-  font-size: 2em;
-}
-
-.newsletter-infos > p {
-  color: $gray;
-  font-size: 0.8em;
-  letter-spacing: 0.5px;
-}
-
-.newsletter > form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.newsletter-form-group {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.newsletter-form-group > button {
-  @include formatButton($purple, $white);
-  @include hoverButton($dark-purple, $white);
-}
-
-.newsletter-form-group > input {
-  @include formatInput($purple, $dark-purple);
-}
-
-.newsletter-checkbox-label {
-  color: $gray;
-  font-size: 0.8em;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
+@include breakpoint(max-width, 768px) {
   .newsletter {
     flex-direction: column;
     align-items: center;

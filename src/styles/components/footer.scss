@@ -10,53 +10,49 @@
   align-items: center;
   flex-direction: column;
   gap: 8px;
+
+  &-logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: $white;
+  }
+
+  a {
+    color: $white;
+    @include linkHoverAndActive(#aaa);
+  }
+
+  &-content {
+    width: 70%;
+    padding: 32px 0px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      @include linkHoverAndActive(#aaa);
+    }
+  }
+
+  &-socials-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-info {
+    color: $light-gray;
+  }
 }
 
-.footer-logo {
-  font-size: 40px;
-  font-weight: bold;
-  color: $white;
-}
-
-.footer a {
-  color: $white;
-  @include linkHoverAndActive();
-}
-
-.footer-content {
-  width: 70%;
-  padding: 32px 0px;
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.footer ul {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.footer-socials-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer-info {
-  color: $light-gray;
-}
-
-.footer ul li {
-  @include linkHoverAndActive(#aaa);
-}
-
-.footer a {
-  @include linkHoverAndActive(#aaa);
-}
-
-@media screen and (max-width: 600px) {
+@include breakpoint(max-width, 600px) {
   .footer-content {
     flex-direction: column;
     gap: 24px;

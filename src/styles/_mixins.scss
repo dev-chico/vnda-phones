@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin linkHoverAndActive($colorHover: #fff, $colorActive: #888) {
   transition: 0.15s ease-in-out;
 
@@ -48,5 +50,26 @@
   &[type="email"]:focus {
     border-color: $focusBorderColor;
     box-shadow: 0px 0px 4px 0px $focusBorderColor;
+  }
+}
+
+@mixin scrollbar($color: $purple, $bgColor: $dark-blue, $width: 10px) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $bgColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 50px;
+  }
+}
+
+@mixin breakpoint($point, $value: 0) {
+  @media only screen and ($point: $value) {
+    @content;
   }
 }

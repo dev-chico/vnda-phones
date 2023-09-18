@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 .customer-feedback {
   background-color: $white;
@@ -8,82 +9,84 @@
   align-items: center;
   justify-content: center;
   gap: 72px;
+
+  &-img {
+    position: relative;
+
+    & > img {
+      width: 250px;
+      border-radius: 4px;
+    }
+
+    & > i {
+      color: $white;
+      background-color: $purple;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 1.2em;
+
+      position: absolute;
+      top: 150px;
+      right: -16px;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    & > footer {
+      display: flex;
+      align-items: flex-start;
+      gap: 64px;
+    }
+  }
+
+  &-text {
+    color: $dark-purple;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 30px;
+    font-size: 24px;
+  }
 }
 
-.customer-feedback-img {
-  position: relative;
-}
+.customer-feedback-name {
+  & > h3 {
+    color: $text-black;
+    font-weight: 700;
+    font-size: 24px;
+  }
 
-.customer-feedback-img > img {
-  width: 250px;
-  border-radius: 4px;
-}
-
-.customer-feedback-img > i {
-  color: $white;
-  background-color: $purple;
-  padding: 8px;
-  border-radius: 4px;
-  font-size: 1.2em;
-
-  position: absolute;
-  top: 150px;
-  right: -16px;
-}
-
-.customer-feedback-content {
-  width: 100%;
-  max-width: 600px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.customer-feedback-text {
-  color: $dark-purple;
-  font-weight: 700;
-  font-style: italic;
-  line-height: 30px;
-  font-size: 24px;
-}
-
-.customer-feedback-name > h3 {
-  color: $text-black;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.customer-feedback-name > img {
-  display: none;
-}
-
-.customer-feedback-content > footer {
-  display: flex;
-  align-items: flex-start;
-  gap: 64px;
+  & > img {
+    display: none;
+  }
 }
 
 .customer-feedback-info {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  & > span {
+    font-size: 0.8em;
+    color: $gray;
+  }
+
+  & > .purple {
+    color: $light-purple;
+  }
+
+  & > .green {
+    color: $green;
+  }
 }
 
-.customer-feedback-info > span {
-  font-size: 0.8em;
-  color: $gray;
-}
-
-.customer-feedback-info > .purple {
-  color: $light-purple;
-}
-
-.customer-feedback-info > .green {
-  color: $green;
-}
-
-@media screen and (max-width: 1024px) {
+@include breakpoint(max-width, 1024px) {
   .customer-feedback-img {
     display: none;
   }
@@ -103,7 +106,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@include breakpoint(max-width, 600px) {
   .customer-feedback {
     padding: 64px 24px;
   }
