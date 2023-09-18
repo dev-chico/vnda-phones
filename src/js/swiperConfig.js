@@ -1,7 +1,8 @@
-const swiperPresentation = new Swiper(".swiper-presentation", {
-  slidesPerView: 5,
-  spaceBetween: 20,
-  freeMode: true,
+const swiperHero = new Swiper(".swiper-hero", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 
 const swiperNewProducts = new Swiper(".swiper-products", {

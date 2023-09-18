@@ -90,6 +90,8 @@
 
   // Discounted products section
   &.discounted-products {
+    background: linear-gradient(to bottom, $dark-purple, $dark-blue);
+
     .products-title {
       color: $white;
     }
