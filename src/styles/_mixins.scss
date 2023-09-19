@@ -53,7 +53,7 @@
   }
 }
 
-@mixin scrollbar($color: $purple, $bgColor: $dark-blue, $width: 10px) {
+@mixin scrollbar($color: $gray, $bgColor: $dark-blue, $width: 10px) {
   &::-webkit-scrollbar {
     width: $width;
   }
