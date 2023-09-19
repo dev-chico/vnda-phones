@@ -7,7 +7,10 @@ class Footer extends HTMLElement {
     this.innerHTML = `
       <footer class="footer">
         <main class="footer-content">
-          <a href="#" class="footer-logo">vPhones</a>
+          <a href="#" class="footer-logo">
+            <i class="fa-solid fa-mobile-screen"></i>
+            vPhones
+          </a>
           <nav class="footer-nav">
             <ul>
               <li><a href="#">Item 1</a></li>

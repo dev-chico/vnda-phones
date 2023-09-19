@@ -6,7 +6,10 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header class="header">
-        <a href="#" class="header-logo">vPhones</a>
+        <a href="#" class="header-logo">
+          <i class="fa-solid fa-mobile-screen"></i>
+          vPhones
+        </a>
         <nav class="header-nav">
           <ul>
             <li><a href="#new-products">Produtos</a></li>
