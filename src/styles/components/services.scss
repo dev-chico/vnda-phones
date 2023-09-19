@@ -1,7 +1,6 @@
 @import "../variables";
 @import "../mixins";
 
-// Services section
 .information.services {
   background-color: $white;
   .information {
@@ -19,7 +18,8 @@
 
     &-link {
       @include formatButton($dark-blue, $white);
-      @include hoverButton($purple, $white);
+      @include hoverButton($white, $dark-blue);
+      box-shadow: inset 0px 0px 2px 0px $dark-blue;
     }
   }
 }

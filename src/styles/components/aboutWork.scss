@@ -1,0 +1,57 @@
+@import "../variables";
+@import "../mixins";
+
+.information.about-work {
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 128px;
+
+  .information {
+    &-content {
+      background: transparent;
+    }
+
+    &-title {
+      color: $white;
+    }
+
+    &-text {
+      color: $white;
+    }
+
+    &-img {
+      position: relative;
+      width: 600px;
+      height: 650px;
+      margin-top: -80px;
+    }
+  }
+}
+
+@include breakpoint(max-width, 600px) {
+  .information.about-work .information-img {
+    display: none;
+  }
+}
+
+@include breakpoint(max-width, 1024px) {
+  .information.about-work {
+    margin-top: 0px;
+  }
+
+  .information.about-work .information-img {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 100px;
+
+    margin: auto 0;
+  }
+}
+
+@include breakpoint(max-width, 1320px) {
+  .information.about-work .information-img {
+    width: 400px;
+    height: 550px;
+  }
+}

@@ -108,7 +108,8 @@
     &-link {
       width: fit-content;
       @include formatButton($white, $dark-blue);
-      @include hoverButton($purple, $white);
+      @include hoverButton($dark-blue, $white);
+      box-shadow: inset 0px 0px 2px 0px #fff;
       margin-top: 24px;
     }
 
