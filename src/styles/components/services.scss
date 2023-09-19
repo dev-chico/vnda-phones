@@ -1,0 +1,43 @@
+@import "../variables";
+@import "../mixins";
+
+// Services section
+.information.services {
+  background-color: $white;
+  .information {
+    &-content {
+      background: transparent;
+    }
+
+    &-title {
+      color: $dark-blue;
+    }
+
+    &-text {
+      color: $dark-blue;
+    }
+
+    &-link {
+      @include formatButton($dark-blue, $white);
+      @include hoverButton($purple, $white);
+    }
+  }
+}
+
+@include breakpoint(max-width, 1320px) {
+  .information-img.fourth {
+    width: 500px;
+  }
+}
+
+@include breakpoint(max-width, 1024px) {
+  .information-images {
+    margin: auto 0;
+  }
+
+  .information-img.fourth {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 100px;
+  }
+}

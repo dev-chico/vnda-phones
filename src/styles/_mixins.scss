@@ -73,3 +73,82 @@
     @content;
   }
 }
+
+@mixin informationSection() {
+  .information {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+    &-content {
+      width: 55%;
+      height: 100%;
+      padding: 120px 0px 80px 80px;
+      border-bottom-right-radius: 8px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &-title {
+      font-size: 2.5em;
+      color: $dark-blue;
+      color: $white;
+    }
+
+    &-text {
+      color: $dark-blue;
+      color: $white;
+      font-size: 1.1em;
+      line-height: 28px;
+      width: 75%;
+    }
+
+    &-link {
+      width: fit-content;
+      @include formatButton($white, $dark-blue);
+      @include hoverButton($purple, $white);
+      margin-top: 24px;
+    }
+
+    &-img {
+      position: absolute;
+      width: 200px;
+      z-index: 1;
+      top: 0;
+      object-fit: cover;
+      box-shadow: 0px 0px 3px 0px #222;
+      border-radius: 4px;
+
+      &.first {
+        right: 64px;
+        width: 280px;
+        height: 350px;
+        z-index: 10;
+      }
+
+      &.second {
+        right: 0;
+        top: 300px;
+
+        width: 250px;
+        height: 320px;
+      }
+
+      &.third {
+        left: 40%;
+        top: 55%;
+
+        width: 400px;
+        height: 400px;
+      }
+
+      &.fourth {
+        right: 0;
+        width: 600px;
+        height: 600px;
+      }
+    }
+  }
+}
