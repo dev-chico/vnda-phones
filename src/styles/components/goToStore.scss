@@ -1,0 +1,38 @@
+@import "../variables";
+@import "../mixins";
+
+.go-to-store {
+  background-color: $white;
+  height: 60vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+
+  &-title {
+    width: 100%;
+    max-width: 600px;
+    font-size: 2.3em;
+    color: $dark-blue;
+  }
+
+  &-link {
+    @include formatButton($dark-blue, $white);
+    @include hoverButton($white, $dark-blue);
+    box-shadow: inset 0px 0px 4px 0px $dark-blue;
+    font-size: 1.2em;
+    height: fit-content;
+    padding: 16px 24px;
+  }
+
+  @include breakpoint(max-width, 1024px) {
+    flex-direction: column;
+    padding: 56px 16px;
+    height: fit-content;
+
+    &-title {
+      text-align: center;
+    }
+  }
+}
