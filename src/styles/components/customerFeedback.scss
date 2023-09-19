@@ -2,16 +2,20 @@
 @import "../mixins";
 
 .customer-feedback {
-  background-color: $white;
+  background: linear-gradient(to top, $dark-blue, $dark-purple);
   padding: 64px 0px;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 72px;
 
+  position: relative;
+
   &-img {
-    position: relative;
+    position: absolute;
+    bottom: -50px;
+    left: 12%;
 
     & > img {
       width: 250px;
@@ -39,15 +43,19 @@
     flex-direction: column;
     gap: 40px;
 
+    text-align: end;
+    margin-right: 20%;
+
     & > footer {
       display: flex;
       align-items: flex-start;
+      justify-content: flex-end;
       gap: 64px;
     }
   }
 
   &-text {
-    color: $dark-purple;
+    color: $white;
     font-weight: 700;
     font-style: italic;
     line-height: 30px;
@@ -57,7 +65,7 @@
 
 .customer-feedback-name {
   & > h3 {
-    color: $text-black;
+    color: $white;
     font-weight: 700;
     font-size: 24px;
   }
@@ -72,72 +80,90 @@
   flex-direction: column;
   gap: 8px;
 
+  color: $white;
+
   & > span {
     font-size: 0.8em;
-    color: $gray;
+    color: $light-gray;
   }
+}
 
-  & > .purple {
-    color: $light-purple;
-  }
-
-  & > .green {
-    color: $green;
+@include breakpoint(max-width, 1320px) {
+  .customer-feedback {
+    &-content {
+      margin-right: 5%;
+    }
   }
 }
 
 @include breakpoint(max-width, 1024px) {
-  .customer-feedback-img {
-    display: none;
-  }
+  .customer-feedback {
+    justify-content: center;
 
-  .customer-feedback-name {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+    &-content {
+      margin-right: 0px;
+      text-align: center;
 
-  .customer-feedback-name > img {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    object-fit: cover;
+      & > footer {
+        justify-content: center;
+      }
+    }
+
+    &-img {
+      display: none;
+    }
+
+    &-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      & > img {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+    }
   }
 }
 
 @include breakpoint(max-width, 600px) {
   .customer-feedback {
     padding: 64px 24px;
-  }
 
-  .customer-feedback-text {
-    font-size: 1.2em;
-    line-height: 24px;
-    text-align: center;
-  }
+    &-content {
+      & > footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+    }
 
-  .customer-feedback-name {
-    align-items: center;
-    justify-content: center;
-  }
+    &-text {
+      font-size: 1.2em;
+      line-height: 24px;
+      text-align: center;
+    }
 
-  .customer-feedback-name > h3 {
-    font-size: 1.2em;
-  }
+    &-name {
+      align-items: center;
+      justify-content: center;
 
-  .customer-feedback-name > img {
-    width: 30px;
-    height: 30px;
-  }
+      & > h3 {
+        font-size: 1.2em;
+      }
 
-  .customer-feedback-content > footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-  }
+      & > img {
+        width: 30px;
+        height: 30px;
+      }
+    }
 
-  .customer-feedback-info {
-    text-align: center;
+    &-info {
+      text-align: center;
+    }
   }
 }
