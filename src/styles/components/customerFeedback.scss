@@ -2,7 +2,7 @@
 @import "../mixins";
 
 .customer-feedback {
-  background: linear-gradient(to top, $dark-blue, $dark-purple);
+  background: linear-gradient(to bottom, $dark-blue, $dark-purple);
   padding: 64px 0px;
 
   display: flex;
@@ -15,10 +15,10 @@
   &-img {
     position: absolute;
     bottom: -50px;
-    left: 12%;
+    left: 10%;
 
     & > img {
-      width: 250px;
+      width: 300px;
       border-radius: 4px;
     }
 
@@ -44,7 +44,7 @@
     gap: 40px;
 
     text-align: end;
-    margin-right: 20%;
+    margin-right: 12%;
 
     & > footer {
       display: flex;
@@ -58,8 +58,9 @@
     color: $white;
     font-weight: 700;
     font-style: italic;
-    line-height: 30px;
+    line-height: 32px;
     font-size: 24px;
+    letter-spacing: 0.5px;
   }
 }
 

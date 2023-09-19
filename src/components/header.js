@@ -9,7 +9,7 @@ class Header extends HTMLElement {
         <a href="#" class="header-logo">vPhones</a>
         <nav class="header-nav">
           <ul>
-            <li><a href="#products">Produtos</a></li>
+            <li><a href="#new-products">Produtos</a></li>
             <li><a href="#whereToFind">Onde nos encontrar</a></li>
             <li><a href="#newsletter">Newsletter</a></li>
           </ul>

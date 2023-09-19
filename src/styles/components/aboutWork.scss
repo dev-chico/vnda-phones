@@ -29,15 +29,10 @@
   }
 }
 
-@include breakpoint(max-width, 600px) {
-  .information.about-work .information-img {
-    display: none;
-  }
-}
-
 @include breakpoint(max-width, 1024px) {
   .information.about-work {
     margin-top: 0px;
+    padding-right: 24px;
   }
 
   .information.about-work .information-img {
@@ -53,5 +48,15 @@
   .information.about-work .information-img {
     width: 400px;
     height: 550px;
+  }
+}
+
+@include breakpoint(max-width, 600px) {
+  .information.about-work {
+    padding-right: 0px;
+  }
+
+  .information.about-work .information-img {
+    display: none;
   }
 }
