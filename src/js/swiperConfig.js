@@ -6,11 +6,15 @@ const swiperHero = new Swiper(".swiper-hero", {
   loop: true,
 });
 
-const swiperNewProducts = new Swiper(".swiper-products", {
+const swiperProducts = new Swiper(".swiper-products", {
   slidesPerView: 1,
   spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     640: {
