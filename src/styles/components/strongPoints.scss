@@ -1,0 +1,162 @@
+@import "../mixins";
+@import "../variables";
+
+.strong-points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  &-cards {
+    width: 780px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      width: 280px;
+      position: absolute;
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        margin-left: 50px;
+      }
+
+      &-title {
+        color: $dark-blue;
+      }
+
+      &-text {
+        color: $gray;
+        font-size: 0.9em;
+        width: 150px;
+      }
+
+      &-img-container {
+        background-color: $dark-blue;
+        width: 280px;
+        height: 280px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 4px 0px $dark-blue;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > i {
+          font-size: 6em;
+          color: #fff;
+
+          &.fa-wallet {
+            color: #30d89d;
+          }
+
+          &.fa-file {
+            color: #ffb34e;
+          }
+
+          &.fa-shield-heart {
+            color: #6767ff;
+          }
+        }
+
+        &.big {
+          height: 400px;
+          background-color: $dark-purple;
+        }
+      }
+
+      &.first {
+        z-index: 2;
+        left: 0px;
+      }
+
+      &.second {
+        z-index: 1;
+        left: 250px;
+      }
+
+      &.third {
+        z-index: 0;
+        left: 500px;
+      }
+    }
+  }
+}
+
+@include breakpoint(max-width, 820px) {
+  .strong-points {
+    &-cards {
+      width: 100%;
+      height: fit-content;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 16px;
+
+      .card {
+        position: inherit;
+        width: fit-content;
+
+        &-content {
+          margin-left: 0px;
+        }
+
+        &-img-container {
+          background-color: $dark-blue;
+          width: 180px;
+          height: 180px;
+
+          & > i {
+            font-size: 2em;
+          }
+
+          &.big {
+            height: 180px;
+          }
+        }
+
+        &.first {
+          left: 0px;
+        }
+
+        &.second {
+          left: 0px;
+        }
+
+        &.third {
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(max-width, 600px) {
+  .strong-points {
+    padding: 72px 4px;
+
+    &-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 56px;
+
+      .card {
+        position: inherit;
+        width: fit-content;
+
+        &-content {
+          align-items: center;
+          text-align: center;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}
