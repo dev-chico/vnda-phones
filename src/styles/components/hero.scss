@@ -33,7 +33,6 @@
     .hero-title {
       color: $white;
       font-size: 3.2em;
-      font-size: 52px;
     }
 
     .hero-text {
@@ -76,35 +75,27 @@
 }
 
 @media screen and (max-width: 768px) {
-  .hero-title {
-    font-size: 2em !important;
+  .hero .hero-overlay .hero-title {
+    font-size: 2em;
   }
 
-  .hero-text {
-    font-size: 0.9em !important;
+  .hero .hero-overlay .hero-text {
+    font-size: 0.9em;
   }
 
-  .hero-link {
-    font-size: 0.9em !important;
-    padding: 12px !important;
+  .hero .hero-overlay .hero-link {
+    font-size: 0.9em;
+    padding: 12px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .hero {
-    padding: 72px 8px !important;
+  .hero .hero-overlay .hero-text {
+    font-size: 0.75em;
+  }
 
-    .hero-title {
-      font-size: 1.6em !important;
-    }
-
-    .hero-text {
-      font-size: 0.75em !important;
-    }
-
-    .hero-link {
-      font-size: 0.75em !important;
-      padding: 10px !important;
-    }
+  .hero .hero-overlay .hero-link {
+    font-size: 0.75em;
+    padding: 10px;
   }
 }

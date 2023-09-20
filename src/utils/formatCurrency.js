@@ -7,5 +7,3 @@ function formatCurrency(value) {
 
   return formCurrency.format(value);
 }
-
-module.exports = { formatCurrency };

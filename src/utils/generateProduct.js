@@ -13,7 +13,7 @@ function generateProduct(element) {
 
   const productPrice = document.createElement("span");
   productPrice.classList.add("product-price");
-  productPrice.innerText = `A partir de: ${formatCurrency(element.price)}`;
+  productPrice.innerText = `A partir de: ${formatCurrency(element.price)}`; // utils/formatCurrency.js
 
   const productLink = document.createElement("a");
   productLink.classList.add("product-link");

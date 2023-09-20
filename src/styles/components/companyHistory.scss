@@ -12,6 +12,32 @@
   }
 }
 
+@include breakpoint(max-width, 1024px) {
+  .information {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    &-content {
+      width: 70%;
+    }
+
+    &-images {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &-img {
+      position: relative;
+      top: 0 !important;
+      left: 0 !important;
+      width: 180px;
+      height: 180px;
+    }
+  }
+}
+
 @include breakpoint(max-width, 1200px) {
   .information {
     &-img {
@@ -36,32 +62,6 @@
         width: 300px;
         height: 300px;
       }
-    }
-  }
-}
-
-@include breakpoint(max-width, 1024px) {
-  .information {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-
-    &-content {
-      width: 70%;
-    }
-
-    &-images {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    &-img {
-      position: relative;
-      top: 0 !important;
-      left: 0 !important;
-      width: 180px !important;
-      height: 180px !important;
     }
   }
 }

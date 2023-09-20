@@ -31,13 +31,19 @@
 }
 
 @include breakpoint(max-width, 1024px) {
-  .information-images {
-    margin: auto 0;
+  .information.services {
+    .information-images {
+      margin: auto 0;
+    }
   }
 
   .information-img.fourth {
-    width: 200px !important;
-    height: 200px !important;
+    width: 400px;
+  }
+}
+
+@include breakpoint(max-width, 768px) {
+  .information-img.fourth {
     border-radius: 100px;
   }
 }

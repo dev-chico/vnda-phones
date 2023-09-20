@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp html scss js components"
+    "build": "gulp html scss js components images"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

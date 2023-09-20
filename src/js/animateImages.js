@@ -20,7 +20,6 @@ ScrollReveal().reveal(firstInformationImg, {
 
 ScrollReveal().reveal(secondfirstInformationImg, {
   ...options,
-  origin: "left",
   distance: "150px",
 });
 
